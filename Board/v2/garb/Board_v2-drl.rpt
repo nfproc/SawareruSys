@@ -1,0 +1,28 @@
+Drill report for D:\doc\研究\RemoCon\Board_v2\Board_v2.kicad_pcb
+Created on 2022/05/02 15:45:30
+
+Copper Layer Stackup:
+    =============================================================
+    L1 :  F.Cu                      front
+    L2 :  B.Cu                      back
+
+
+Drill file 'Board_v2.drl' contains
+    plated through holes:
+    =============================================================
+    T1  0.300mm  0.0118"  (41 holes)
+    T2  0.600mm  0.0236"  (5 holes)
+    T3  0.700mm  0.0276"  (2 holes)  (with 2 slots)
+    T4  0.800mm  0.0315"  (150 holes)
+    T5  0.900mm  0.0354"  (18 holes)
+    T6  1.000mm  0.0394"  (6 holes)
+    T7  1.100mm  0.0433"  (12 holes)
+
+    Total plated holes count 234
+
+
+Not plated through holes are merged with plated holes
+    unplated through holes:
+    =============================================================
+
+    Total unplated holes count 0

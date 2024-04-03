@@ -1,0 +1,12 @@
+[Unit]
+Description = Connector for SawareruSys (Server)
+
+[Service]
+Type = simple
+ExecStart = /opt/connector_serv.py /dev/ttyUSB1 3399
+Restart = always
+KillSignal = SIGINT
+StandardOutput=append:/var/log/connector_serv.log
+
+[Install]
+WantedBy=multi-user.target

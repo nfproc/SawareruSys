@@ -1,0 +1,6 @@
+[submodule "svinst_port"]
+	path = svinst_port
+	url = https://github.com/nfproc/svinst_port.git
+[submodule "DRFront"]
+	path = DRFront
+	url = https://github.com/nfproc/DRFront.git

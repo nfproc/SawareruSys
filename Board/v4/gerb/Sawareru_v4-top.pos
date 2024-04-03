@@ -1,0 +1,47 @@
+### Footprint positions - created on Fri Nov 17 18:41:44 2023 ###
+### Printed by KiCad version 7.0.5
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref     Val                Package                                             PosX       PosY       Rot  Side
+C1        2.2U               C_0603_1608Metric_Pad1.08x0.95mm_HandSolder      58.6375    51.1000    0.0000  top
+C2        0.1U               C_0603_1608Metric_Pad1.08x0.95mm_HandSolder      65.0000    37.1375   90.0000  top
+C3        0.1U               C_0603_1608Metric_Pad1.08x0.95mm_HandSolder      44.0000    37.5000   90.0000  top
+C4        2.2U               C_0603_1608Metric_Pad1.08x0.95mm_HandSolder      58.6625    46.3000    0.0000  top
+CN1       USB_C_2.0          USB_HRO_TYPE-C-31-M-12                           49.2000    51.3500  180.0000  top
+CN2       Conn_PIC_ICSP_ICD  PinHeader_1x06_P2.54mm_Vertical                  76.2250    48.2000   90.0000  top
+D1        RED                LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder    64.1750    51.1000  180.0000  top
+D2        Green              LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder    70.3750    17.0000    0.0000  top
+D3        Green              LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder    61.5000    17.0000    0.0000  top
+D4        Green              LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder    52.3750    17.0000    0.0000  top
+D5        Green              LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder    43.3750    17.0000    0.0000  top
+D6        Green              LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder    34.3750    17.0000    0.0000  top
+D7        Green              LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder    25.3750    17.0000    0.0000  top
+D8        Green              LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder    16.3750    17.0000    0.0000  top
+D9        Green              LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder     7.3750    17.0000    0.0000  top
+R1        1K                 R_0603_1608Metric_Pad0.98x0.95mm_HandSolder      69.9750    51.1000    0.0000  top
+R2        10K                R_0603_1608Metric_Pad0.98x0.95mm_HandSolder      69.9750    46.3000    0.0000  top
+R3        10K                R_0603_1608Metric_Pad0.98x0.95mm_HandSolder      65.0000    32.5000  -90.0000  top
+R4        5.1K               R_0603_1608Metric_Pad0.98x0.95mm_HandSolder      39.8000    51.2000  180.0000  top
+R5        5.1K               R_0603_1608Metric_Pad0.98x0.95mm_HandSolder      64.0875    46.3000    0.0000  top
+RN1       1K                 R_Array_Convex_4x0603                            61.4500    23.2500   90.0000  top
+RN2       1K                 R_Array_Convex_4x0603                            54.0000    23.2000   90.0000  top
+RN3       330                R_Array_Convex_4x0603                            18.8000    39.5500   90.0000  top
+RN4       330                R_Array_Convex_4x0603                            10.2000    39.5500   90.0000  top
+RN5       10K                R_Array_Convex_4x0603                            70.6000    38.5000   90.0000  top
+SW1       SW_SPDT            SW_Slide_SSSS213202                              70.4000     8.0000    0.0000  top
+SW2       SW_SPDT            SW_Slide_SSSS213202                              61.4000     8.0000    0.0000  top
+SW3       SW_SPDT            SW_Slide_SSSS213202                              52.4000     8.0000    0.0000  top
+SW4       SW_SPDT            SW_Slide_SSSS213202                              43.4000     8.0000    0.0000  top
+SW5       SW_SPDT            SW_Slide_SSSS213202                              34.4000     8.0000    0.0000  top
+SW6       SW_SPDT            SW_Slide_SSSS213202                              25.4000     8.0000    0.0000  top
+SW7       SW_SPDT            SW_Slide_SSSS213202                              16.4000     8.0000    0.0000  top
+SW8       SW_SPDT            SW_Slide_SSSS213202                               7.4000     8.0000    0.0000  top
+SW9       SW_Push            SW_SPST_TS-06104                                 92.4000    26.8500   90.0000  top
+SW10      SW_Push            SW_SPST_TS-06104                                 81.4000    26.8500    0.0000  top
+SW11      SW_Push            SW_SPST_TS-06104                                 70.4000    26.8500   90.0000  top
+SW12      SW_Push            SW_SPST_TS-06104                                 81.4000    15.8500    0.0000  top
+SW13      SW_Push            SW_SPST_TS-06104                                 81.4000    37.8500    0.0000  top
+U1        PIC18F45K50        TQFP-44_10x10mm_P0.8mm                           55.0000    36.5000    0.0000  top
+U2        OSL40391-LX        OSL40391                                         24.3100    27.5000    0.0000  top
+U3        ULN2003A           SOIC-16_3.9x9.9mm_P1.27mm                        31.8000    41.2500  -90.0000  top
+## End

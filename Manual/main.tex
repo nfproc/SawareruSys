@@ -1,0 +1,91 @@
+\documentclass[a4j,11pt,oneside,openany]{ltjsbook}
+% SawareruSys User Manual (for SawareruSys v1.0.0)
+% 2024-03-29 Naoki F., AIT. CC BY-SA 4.0 is applied.
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{here}
+\usepackage{url}
+\usepackage{ascmac}
+\usepackage{txfonts}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{multirow}
+\usepackage[ipaex]{luatexja-preset}
+
+\geometry{truedimen,papersize={210truemm,297truemm}}
+\geometry{top=30truemm,bottom=30truemm,left=20truemm,right=20truemm,footskip=10truemm}
+
+\fboxsep=0pt
+\fboxrule=1pt
+
+\makeatletter
+\def\linesperpage#1{\baselineskip=\textheight
+  \divide\baselineskip by #1}
+
+\renewcommand{\chapter}{%
+  \if@openright\cleardoublepage\else\clearpage\fi
+  \global\@topnum\z@
+  \secdef\@chapter\@schapter}
+
+\def\ps@plainfoot{%
+  \let\@mkboth\@gobbletwo
+  \let\@oddhead\@empty
+  \def\@oddfoot{\normalfont\hfil-- \thepage\ --\hfil}%
+  \let\@evenhead\@empty
+  \let\@evenfoot\@oddfoot}
+\let\ps@plain\ps@plainfoot
+\makeatother
+
+\pagestyle{plain}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2}
+
+\lstset{numbers=left,frame=lines,basicstyle=\footnotesize\ttfamily,%
+numberstyle=\footnotesize\itshape,xleftmargin=5truemm,escapeinside=||}
+\let\origthelstnumber\thelstnumber
+\makeatletter
+\newcommand*\Suppressnumber{%
+  \lst@AddToHook{OnNewLine}{%
+    \let\thelstnumber\relax%
+     \advance\c@lstnumber-\@ne\relax%
+    }%
+}
+
+\newcommand*\Reactivatenumber[1]{%
+  \setcounter{lstnumber}{\numexpr#1-1\relax}
+  \lst@AddToHook{OnNewLine}{%
+   \let\thelstnumber\origthelstnumber%
+   \refstepcounter{lstnumber}
+  }%
+}
+\makeatother
+
+\title{{\Huge 「さわれる」遠隔学習システム}\\利用マニュアル}
+\author{藤枝 直輝（愛知工業大学）}
+\date{Version 1.0.0}
+
+\begin{document}
+\maketitle
+\frontmatter
+\tableofcontents
+\mainmatter
+
+\include{1_abstract}
+\include{2_quickstart}
+\include{3_command}
+\include{4_iocircuit}
+\include{5_board}
+
+\include{9_acknowledgment}
+
+\nocite{*}
+\bibliographystyle{junsrt}
+\bibliography{main}
+
+\appendix
+%\include{A_VHDLsyntax}
+%\include{B_remoteflow}
+%\include{C_oldflow}
+
+\end{document}

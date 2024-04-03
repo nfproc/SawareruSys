@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP OSL40391-LX
+D 0.39 inch four digits display, common cathode
+K display LED 7-segment
+$ENDCMP
+#
+#End Doc Library
