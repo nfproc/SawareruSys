@@ -26,8 +26,8 @@ pp. 188-193, 2023, DOI: <a href="https://doi.org/10.1109/TALE56641.2023.10398409
 にあります．
 
 配布パッケージのダウンロード:
-<a href="https://aitech.ac.jp/~dslab/nf/SawareruSys/SawareruSys_dist_v1_0_0.zip">
-ZIP</a> (37.4 MiB)
+<a href="https://aitech.ac.jp/~dslab/nf/SawareruSys/SawareruSys_dist_v1_0_1.zip">
+ZIP</a> (37.3 MiB)
 
 ### 本リポジトリの内容:
 - Board/         : コントローラボードの KiCad による設計ファイル一式
