@@ -112,8 +112,8 @@ New-Item -Path ${DistDir}\Connector\Client\source -ItemType Directory > $null
 Compress-Archive -Path ${PSScriptRoot}\Connector\Client\* -DestinationPath ${DistDir}\Connector\Client\source\Connector_client.zip
 New-Item -Path ${DistDir}\Connector\Server -ItemType Directory > $null
 Copy-Item ${PSScriptRoot}\Connector\Server\connector_serv.py -Destination ${DistDir}\Connector\Server\connector_serv.py
-Compress-Archive -Path ${DistDir}\* -DestinationPath ${PSScriptRoot}\SawareruSys_dist.zip
-Compress-Archive -Path ${DistDir}\DRFront\* -DestinationPath ${PSScriptRoot}\DRFront_dist.zip
+Compress-Archive -Path ${DistDir}\* -DestinationPath ${PSScriptRoot}\SawareruSys_dist.zip -Force
+Compress-Archive -Path ${DistDir}\DRFront\* -DestinationPath ${PSScriptRoot}\DRFront_dist.zip -Force
 
 Write-Host "配布パッケージの作成が完了しました．"
 Pause
