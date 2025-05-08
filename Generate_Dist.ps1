@@ -1,15 +1,15 @@
 ﻿# Distibution Package Generation for SawareruSys
-# 2024-04-02 Naoki F., AIT
+# 2025-04-30 Naoki F., AIT
 $OutputEncoding = [Text.Encoding]::UTF8
 
 # Constants
 $DistDir        = $PSScriptRoot + "\Dist"
 $PackageDir     = $PSScriptRoot + "\Pkg"
 $BuildDir       = $PSScriptRoot + "\Build"
-$WinSCPRemote   = "https://sourceforge.net/projects/winscp/files/WinSCP/6.3.2/WinSCP-6.3.2-Portable.zip"
-$WinSCPLocal    = $PackageDir + "\WinSCP632.zip"
-$WinSCPJARemote = "https://winscp.net/translations/dll/6.3.2/jp.zip"
-$WinSCPJALocal  = $PackageDir + "\WinSCP632JA.zip"
+$WinSCPRemote   = "https://sourceforge.net/projects/winscp/files/WinSCP/6.5/WinSCP-6.5-Portable.zip"
+$WinSCPLocal    = $PackageDir + "\WinSCP65.zip"
+$WinSCPJARemote = "https://winscp.net/translations/dll/6.5/jp.zip"
+$WinSCPJALocal  = $PackageDir + "\WinSCP65JA.zip"
 $OokiiRemote    = "https://www.nuget.org/api/v2/package/Ookii.Dialogs.Wpf/5.0.1"
 $OokiiLocal     = $PackageDir + "\Ookii.Dialogs.Wpf.5.0.1.zip"
 
@@ -99,6 +99,12 @@ Copy-Item ${PSScriptRoot}\DRFront\README.md -Destination ${DistDir}\DRFront\READ
 Copy-Item ${BuildDir}\DRFront\bin\Release\DRFront.exe -Destination ${DistDir}\DRFront\DRFront.exe
 Copy-Item ${BuildDir}\DRFront\bin\Release\Ookii.Dialogs.Wpf.dll -Destination ${DistDir}\DRFront\Ookii.Dialogs.Wpf.dll
 Copy-Item -Recurse ${PSScriptRoot}\DRFront\Boards -Destination ${DistDir}\DRFront\
+New-Item -Path ${DistDir}\DRFront\Boards\base -ItemType Directory > $null
+Copy-Item ${PSScriptRoot}\DRFront\BaseDesign_RC\*.vhdl -Destination ${DistDir}\DRFront\Boards\base
+Copy-Item ${PSScriptRoot}\DRFront\BaseDesign_RC\Arty\*.* -Destination "${DistDir}\DRFront\Boards\Arty A7-35T"
+Copy-Item ${PSScriptRoot}\DRFront\BaseDesign_RC\CMod\*.* -Destination "${DistDir}\DRFront\Boards\CMod A7-35T"
+Copy-Item ${PSScriptRoot}\DRFront\BaseDesign_RC\Nexys\*.* -Destination "${DistDir}\DRFront\Boards\Nexys A7-100T"
+Get-ChildItem ${DistDir}\DRFront\Boards -Filter dr_*.vhdl -Recurse | Remove-Item -Force
 New-Item -Path ${DistDir}\DRFront\ext -ItemType Directory > $null
 Copy-Item ${BuildDir}\svinst_port\target\release\svinst_port.exe -Destination ${DistDir}\DRFront\ext\svinst_port.exe
 New-Item -Path ${DistDir}\DRFront\sources -ItemType Directory > $null
