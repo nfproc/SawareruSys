@@ -1,6 +1,6 @@
 SawareruSys: A "touchable" remote FPGA lab system
 =================================================
-Copyright (C) 2022-2025 Naoki FUJIEDA. All rights reserved.
+Copyright (C) 2022-2026 Naoki FUJIEDA. All rights reserved.
 
 ### 概要
 
@@ -26,8 +26,8 @@ pp. 188-193, 2023, DOI: <a href="https://doi.org/10.1109/TALE56641.2023.10398409
 にあります．
 
 配布パッケージのダウンロード:
-<a href="https://aitech.ac.jp/~dslab/nf/SawareruSys/SawareruSys_dist_v1_1_0.zip">
-ZIP</a> (33.2 MiB)
+<a href="https://aitech.ac.jp/~dslab/nf/SawareruSys/SawareruSys_dist_v1_2_0.zip">
+ZIP</a> (33.7 MiB)
 
 ### 本リポジトリの内容:
 - Board/         : コントローラボードの KiCad による設計ファイル一式
@@ -48,7 +48,7 @@ ZIP</a> (33.2 MiB)
 - サーバ側: Ubuntu 20.04 LTS 以降 + Python 3.8 以降 + Vivado 2020.2 以降
 
 配布パッケージをビルドする際には，msbuild と Rust (cargo) も必要です．
-msbuild 17.13.19 (Visual Studio 2022) および cargo 1.86.0 の環境で
+msbuild 17.14.40 (Visual Studio 2022) および cargo 1.93.1 の環境で
 ビルドできることを確認しています．
 
 ### 配布パッケージのビルド
@@ -77,6 +77,12 @@ Apache ライセンス v2.0 が適用されます．
 詳細は COPYING ファイルを参照してください．
 
 ### 更新履歴
+
+- v1.2.0 2026-03-04
+  - DRFront のバージョンを 0.7.0 に更新．
+  - 再配布する WinSCP のバージョンを 6.5.5 に更新．
+  - 上記更新に伴うビルドスクリプトの修正．
+
 - v1.1.0 2025-05-08
   - DRFront のバージョンを 0.6.0 に更新．
   - 上記更新に伴うビルドスクリプトの修正．

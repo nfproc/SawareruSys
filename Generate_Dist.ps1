@@ -6,10 +6,10 @@ $OutputEncoding = [Text.Encoding]::UTF8
 $DistDir        = $PSScriptRoot + "\Dist"
 $PackageDir     = $PSScriptRoot + "\Pkg"
 $BuildDir       = $PSScriptRoot + "\Build"
-$WinSCPRemote   = "https://sourceforge.net/projects/winscp/files/WinSCP/6.5/WinSCP-6.5-Portable.zip"
-$WinSCPLocal    = $PackageDir + "\WinSCP65.zip"
-$WinSCPJARemote = "https://winscp.net/translations/dll/6.5/jp.zip"
-$WinSCPJALocal  = $PackageDir + "\WinSCP65JA.zip"
+$WinSCPRemote   = "https://sourceforge.net/projects/winscp/files/WinSCP/6.5.5/WinSCP-6.5.5-Portable.zip"
+$WinSCPLocal    = $PackageDir + "\WinSCP655.zip"
+$WinSCPJARemote = "https://winscp.net/translations/dll/6.5.5/jp.zip"
+$WinSCPJALocal  = $PackageDir + "\WinSCP655JA.zip"
 $OokiiRemote    = "https://www.nuget.org/api/v2/package/Ookii.Dialogs.Wpf/5.0.1"
 $OokiiLocal     = $PackageDir + "\Ookii.Dialogs.Wpf.5.0.1.zip"
 
@@ -71,7 +71,7 @@ Copy-Item -Recurse ${PSScriptRoot}\DRFront\Repo\* -Destination ${BuildDir}\DRFro
 Copy-Item $OokiiLocal -Destination ${BuildDir}\DRFront\packages\Ookii.Dialogs.Wpf.5.0.1\Ookii.Dialogs.Wpf.5.0.1.nupkg
 Expand-Archive -Path $OokiiLocal -DestinationPath ${BuildDir}\DRFront\packages\Ookii.Dialogs.Wpf.5.0.1
 Set-Location ${BuildDir}\DRFront
-msbuild -p:Configuration=Release
+dotnet build -c Release
 
 Write-Host "PC 側 Connector アプリをビルドします．"
 New-Item -Path ${BuildDir}\Connector -ItemType Directory > $null
@@ -96,8 +96,11 @@ Expand-Archive -Path $WinSCPJALocal -DestinationPath ${DistDir}\WinSCP
 New-Item -Path ${DistDir}\DRFront -ItemType Directory > $null
 Copy-Item ${PSScriptRoot}\DRFront\COPYING -Destination ${DistDir}\DRFront\COPYING
 Copy-Item ${PSScriptRoot}\DRFront\README.md -Destination ${DistDir}\DRFront\README.md
-Copy-Item ${BuildDir}\DRFront\bin\Release\DRFront.exe -Destination ${DistDir}\DRFront\DRFront.exe
-Copy-Item ${BuildDir}\DRFront\bin\Release\Ookii.Dialogs.Wpf.dll -Destination ${DistDir}\DRFront\Ookii.Dialogs.Wpf.dll
+Copy-Item ${BuildDir}\DRFront\bin\Release\net8.0-windows\DRFront.exe -Destination ${DistDir}\DRFront\DRFront.exe
+Copy-Item ${BuildDir}\DRFront\bin\Release\net8.0-windows\DRFront.deps.json -Destination ${DistDir}\DRFront\DRFront.deps.json
+Copy-Item ${BuildDir}\DRFront\bin\Release\net8.0-windows\DRFront.dll -Destination ${DistDir}\DRFront\DRFront.dll
+Copy-Item ${BuildDir}\DRFront\bin\Release\net8.0-windows\DRFront.runtimeconfig.json -Destination ${DistDir}\DRFront\DRFront.runtimeconfig.json
+Copy-Item ${BuildDir}\DRFront\bin\Release\net8.0-windows\Ookii.Dialogs.Wpf.dll -Destination ${DistDir}\DRFront\Ookii.Dialogs.Wpf.dll
 Copy-Item -Recurse ${PSScriptRoot}\DRFront\Boards -Destination ${DistDir}\DRFront\
 New-Item -Path ${DistDir}\DRFront\Boards\base -ItemType Directory > $null
 Copy-Item ${PSScriptRoot}\DRFront\BaseDesign_RC\*.vhdl -Destination ${DistDir}\DRFront\Boards\base
